@@ -1,25 +1,41 @@
 <html>
    <head>
-      <title>JavaScript String split() Method</title>
-   </head>
+	  	<title>Henlo Zodiac</title>
+	  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+		<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+		<style>
+			body{
+				background-color: #6fe288;
+				font-family: Nunito;
+			}
+
+			div{
+				background-color: #ffffff;
+				padding: 25px 40px;
+			}
+		</style>
+	</head>
    
    <body>
-	<form name="zodiac">
-	<input class="form-control" type="text" name="birthdate" size="12">
-	<input class="btn calc" type="button" value="Calculate" onClick="signs()">
-	<br>ZODIAC SIGN:
-	<label class="form-control" type="text" id="sign" size="12" value="" align="right"></label></br>
-	<br>CHINESE ZODIAC:
-	<label class="form-control" type="text" id="csign" size="12" value="" align="right"></label></br>
-	<br>LUCKY NUMBER:
-	<label class="form-control" type="text" id="luckynum" size="12" value="" align="right"></label></br>
-	<br><label class="form-control" type="text" id="luckycolor" size="12" value="" align="right">YOU ARE LUCKY TODAY!!</label></br>
-	<br>LEAP YEAR:
-	<label class="form-control" type="text" id="leapyear" size="12" value="" align="right"></label></br>
-	<br>AGE:
-	<label class="form-control" type="text" id="age" size="12" value="" align="right"></label></br>
-	
-	</form>
+	<div style="margin: 8% 35% 5% 35%">
+		<form name="zodiac">
+			<input class="form-control" type="text" name="birthdate" size="12" placeholder="MM-DD-YYYYY">
+			<br>
+			<center><input class="btn btn-outline-primary" type="button" value="Calculate" onClick="signs()"></center>
+			<br>
+			<b>ZODIAC SIGN:</b>
+			<label type="text" id="sign" size="12" value="" align="right"></label>
+			<br><b>CHINESE ZODIAC:</b>
+			<label type="text" id="csign" size="12" value="" align="right"></label>
+			<br><b>LUCKY NUMBER:</b>
+			<label type="text" id="luckynum" size="12" value="" align="right"></label>
+			<br><label type="text" id="luckycolor" size="12" value="" align="right"><b>THIS IS YOUR LUCKY COLOR</b></label><br>
+			<b>LEAP YEAR:</b>
+			<label type="text" id="leapyear" size="12" value="" align="right"></label>
+			<br><b>AGE:</b>
+			<label type="text" id="age" size="12" value="" align="right"></label>
+		</form>
+	</div>
       <script type="text/javascript">
 	  function signs(){ 
 		var str =document.zodiac.birthdate.value;
